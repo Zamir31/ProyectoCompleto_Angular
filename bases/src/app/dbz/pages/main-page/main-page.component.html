@@ -2,10 +2,10 @@
 <hr>
 <div class="row">
   <div class="col">
-    <dbz-list [characterList]="dbzServicio.characters" (characterSelect)="dbzServicio.deleteCharacter($event)"></dbz-list>
+    <dbz-list [characterList]="characters" (characterSelect)="deleteCharacter($event)"></dbz-list>
   </div>
 
   <div class="col">
-    <dbz-add-character (newCharacter)="dbzServicio.newCharacter($event)"></dbz-add-character>
+    <dbz-add-character (newCharacter)="newCharacter($event)"></dbz-add-character>
   </div>
 </div>

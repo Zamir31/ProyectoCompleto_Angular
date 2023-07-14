@@ -12,6 +12,6 @@
               'list-group-item-success': isFirst}">
     {{i+1}}.
     {{ pers.nameCha }} - Power: {{ pers.power }}
-    <button class="btn btn-close" (click)="onDelete(i)"></button>
+    <button class="btn btn-close" (click)="onDelete(pers.id)"></button>
   </li>
 </ul>

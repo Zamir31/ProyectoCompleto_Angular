@@ -10,16 +10,19 @@ import { ICharacter } from '../../interfaces/character';
 export class ListComponent {
 
   @Output()
-  public characterSelect : EventEmitter<number> = new EventEmitter();
+  public characterSelect : EventEmitter<string> = new EventEmitter();
 
   @Input()
   public characterList : ICharacter[] = [];
 
-  onDelete( index: number): void {
+  onDelete( index?: string): void {
+
+    if( !index) return;
+
     this.characterSelect.emit(index);
   }
 
-  deleteCharacter( num: number): void {
-    // this.characterList.splice(num, 1);
-  }
+  // deleteCharacter( num: number): void {
+  //   // this.characterList.splice(num, 1);
+  // }
 }
